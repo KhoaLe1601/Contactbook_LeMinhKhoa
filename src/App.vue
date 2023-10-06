@@ -1,11 +1,23 @@
 <script>
-export default {
+import AppHeader from './components/AppHeader.vue';
+import router from './router';
 
-}
+export default {
+  components: {
+    AppHeader,
+    router
+},
+};
 </script>
 
 <template>
-    <h1>Hello, vue.js!</h1>
+    <div  id="app">
+      <AppHeader/>
+
+      <div class="container mt-3">
+        <router-view/>
+      </div>
+    </div>
 </template>
 
 <style>
